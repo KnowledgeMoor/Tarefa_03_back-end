@@ -17,6 +17,7 @@ public class PostComment {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         Long id;
 
+        // Coloquei isso no lugar de @JsonIgnore porque não estava funcionando com @JsonIgnore.
         @JsonBackReference
         @ManyToOne
         private Post post;
